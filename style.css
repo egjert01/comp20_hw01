@@ -1,0 +1,180 @@
+    /* Set additional styling options for the columns*/
+    .column {
+        float: left;
+    }
+
+    .left {
+        width: 49%;
+    }
+
+    .right {
+        width: 49%;
+    }
+
+    .mid {
+        width: 2%;
+    }
+
+
+    h1 {
+        text-align: center;
+    }
+
+    .col_img {
+        float: right;
+        width: 450px;
+    }
+
+    .bold {
+        font-weight: bold
+    }
+
+    /* CSS */
+    .button-48 {
+        appearance: none;
+        background-color: #FFFFFF;
+        border-width: .5;
+        border-color: #EBEBEB;
+        box-sizing: border-box;
+        color: #000000;
+        cursor: pointer;
+        display: inline-block;
+        /* font-family: Clarkson, Helvetica, sans-serif; */
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 1em;
+        margin: 0;
+        opacity: 1;
+        outline: 0;
+        padding: .5em .5em;
+        position: relative;
+        text-align: center;
+        /* text-decoration: none; */
+        /* text-rendering: geometricprecision; */
+        text-transform: uppercase;
+        transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
+        /* user-select: none; */
+        /* -webkit-user-select: none; */
+        touch-action: manipulation;
+        vertical-align: baseline;
+        white-space: nowrap;
+    }
+
+    .button-48:before {
+        animation: opacityFallbackOut .5s step-end forwards;
+        backface-visibility: hidden;
+        background-color: #EBEBEB;
+        clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateZ(0);
+        transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+        width: 100%;
+    }
+
+    .button-48:hover:before {
+        animation: opacityFallbackIn 0s step-start forwards;
+        clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+    }
+
+    .button-48:after {
+        background-color: #FFFFFF;
+    }
+
+    .button-48 span {
+        z-index: 1;
+        position: relative;
+    }
+
+    #emily_img {
+        display: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .close {
+        right: 0px;
+        position: absolute;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        /* sit on top */
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    .modal-content,
+    #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
