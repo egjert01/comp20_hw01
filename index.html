@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>comp20 hw01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>All about Emily!</h1>
+    <div class="row">
+        <div class="column left">
+            <p style="text-align:right"><span class="bold">Favorite place:</span> My studio when studying abroad in Rome!</p>
+            <img class="col_img" src="rome_studio.jpg">
+        </div>
+        <div class="column mid">
+            <p></p>
+        </div>
+        <div class="column right">
+            <p><button class="button-48" role="button" onclick="modalize('emily.jpg', 'Emily & Teddy!')"><span class="text">First name:</span></button> Emily</p>
+            <p><button class="button-48" onclick="modalize('comp.jpg', 'Major: computer science (ft. comp40\'s attempted murder)')"><span class="text">Major:</span></button> Computer Science</p>
+            <p><button class="button-48" onclick="modalize('map.png', 'IP Address')"><span class="text">IP address (no hacking allowed): </span></button> 108.49.39.33</p>
+            <p><button class="button-48" onclick="modalize('kirkland_sig.png', '(Hometown claim to fame: Costco\'s Kirkland Signature (TM))')"><span class="text">Hometown:</span></button> Kirkland, Washington</p>
+            <p><button class="button-48" onclick="modalize('aer.jpg', 'I considered going to art school instead of Tufts')"><span class="text">Emily's surprise:</span></button> I considered going to art school instead of Tufts</p>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+</body>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    function modalize(img_src, caption) {
+        modal.style.display = "block";
+        modalImg.src = img_src;
+        captionText.innerHTML = caption;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+</script>
+
+
+</html>
